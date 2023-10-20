@@ -2,7 +2,7 @@ import express, { response } from "express";
 import { PORT, MongoDB } from "./config.js";
 import mongoose from "mongoose";
 import { error } from "console";
-import Book from "./models/bookModel.js";
+import { Book } from "./models/bookModel.js";
 const app = express();
 app.use(express.json());
 app.get("/", (req, respo) => {

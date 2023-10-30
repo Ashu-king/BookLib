@@ -13,6 +13,14 @@ const BookSchema = mongoose.Schema(
       type: Number,
       required: true,
     },
+    Image: {
+      type: String,
+      requried: true,
+    },
+    synopsis: {
+      type: String,
+      requried: true,
+    },
   },
   {
     timestapms: true,

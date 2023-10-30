@@ -7,7 +7,14 @@ import booksRoute from "./routes/booksRoute.js";
 import cors from "cors";
 const app = express();
 app.use(express.json());
-
+app.use(
+  cors({
+    origin: "*",
+    methods: ["GET,HEAD,PUT,PATCH,POST,DELETE"],
+    allowedHeaders: ["content-type"],
+    credentials: true,
+  })
+);
 app.get("/", (req, respo) => {
   console.log(req);
   return respo.status(200).send("Welcom Ashu Jha, Let build You first Project");
